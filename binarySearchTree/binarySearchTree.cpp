@@ -118,6 +118,51 @@ public:
 int main()
 {
 	BinaryTree obj;
-	
+	while (true) {
+		cout << "\nMenu" << endl;
+		cout << "1. Implement insert operationn" << endl;
+		cout << "2. Perform inorder transversal" << endl;
+		cout << "3. Perform preorder transversal" << endl;
+		cout << "4. Perform postorder transversal" << endl;
+		cout << "5. Exit" << endl;
+		cout << "\nEnter your choice (1-5): ";
+		char ch;
+		cin >> ch;
+		cout << endl;
+
+		switch (ch) {
+		case '1':
+		{
+			cout << "Enter a Word : ";
+			string word;
+			cin >> word;
+			obj.insert(word);
+			break;
+		}
+		case '2':
+		{
+			obj.inorder(obj.ROOT);
+			break;
+		}
+		case '3':
+		{
+			obj.preorder(obj.ROOT);
+			break;
+		}
+		case '4':
+		{
+			obj.postorder(obj.ROOT);
+			break;
+		}
+		case '5':
+			return 0;
+
+		default:
+		{
+			cout << "\nInvalid option" << endl;
+			break;
+		}
+		}
+	}
 
 }
